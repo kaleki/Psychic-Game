@@ -1,26 +1,79 @@
 <DOCTYPE  html>
 <html>
-<head>
+<head></head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Psychic-Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <script type="text/javascript" src="/assets/javascript/game.js"></script>
+    
 </head>
 <body>
-    
-    <header>The Psychic-Gmae</header>
-    
+    <header>Psychic-Game</header>
+
     <div>
-        <h1>Guess What Letter Im thinking Of?</h1>
-        <p>Wins: 0</p>
-        <p>Losses: 0</p>
-        <p>Guesses Left: 9</p>
-        <p>Your Guesses:</p>
+    <h1>Guess What Letter Im Thinking Of?</h1>
+    <p>Wins:0</p>
+    <p>Losses: 0</p>
+    <p>Guesses Left: 9</p>
+    <p>Guesses so Far:</p>
+
+        
+                <p id="userguess-text"></p>
+                <p id="computerguess-text"></p>
+                <p id="wins-text"></p>
+                <p id="losses-text"></p>
+                <p id="guesses-so-far"></p>
+                
+                
+              </div>
+              
+            
+    <script type="text/javascript">
+    var computerGuess = [ "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    var wins = 0,
+        losses = 0,
+        guessesLeft = 9,
+        lettersGuessed = [],
+        computerGuess = [];
 
 
-    </div>
+        
+    var userGuessText = document.getElementById("userguess-text");
+    var computerGuessText = document.getElementById("computerguess-text");
+    var winsText = document.getElementById("wins-text");
+    var lossesText = document.getElementById("losses-text");
+    var lettersGuessed = document.getElementById("guesses-left");
+    
+
+    document.onkeyup = function(event){
+       var userGuess = event.key;
+   if ((userGuess === computerGuess) && (guessesLeft > 0)){
+       wins++;
+       guessesLeft = 9;
+       lettersGuessed.length = 0;
+       computerGuess.length = 0;
+       var computerGuess = computerGuess[Math.floor(Math.random() * computerGuess.length)]
+   }
+  else if ((userGuess !== computerGuess) && (guessesLeft > [0])) {
+        guessesLeft = guessesLeft - 1;
+   }
+   else {
+       losses++;
+   }
+}
+     
+
+
+
+
+
+
+    
+    </script>
+
+    
+
 
 </body>
 

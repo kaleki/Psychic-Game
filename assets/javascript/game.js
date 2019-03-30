@@ -45,4 +45,4 @@ var wins = 0,
               "<p>Wins: " + wins + "</p>" +
               "<p>Losses: " + losses + "</p>" +
               "<p>Guesses left: " + guessesLeft + "</p>" +
-              "<p>Your guesses so far: " + letterGuessed + "</p>";
+              "<p>Your guesses so far: " + letterGuessed + "</p>"}
